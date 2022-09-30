@@ -1,0 +1,1 @@
+Get-ChildItem -Recurse -Path C:\inetpub\logs\LogFiles -Filter "*.log" | Select-String -Pattern 'powershell.*autodiscover\.json.*\@.*200'
