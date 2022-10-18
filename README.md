@@ -25,7 +25,7 @@ This disables remote PowerShell for all users except the admin:
 
 ```PowerShell
 $DSA = Get-User -ResultSize Unlimited -Filter "(Name -NotLike '*Administrator*')"
-$DSA | foreach { Set-User -Identity $_ RemotePowerShellEnabled $false }
+$DSA | foreach { Set-User -Identity $_ -RemotePowerShellEnabled $false }
 ```
 
 If you want to check if it worked, you can check which accounts still have remote PowerShell enabled (or disabled by changing setting the parameter to false):
